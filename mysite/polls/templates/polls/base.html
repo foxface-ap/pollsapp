@@ -8,24 +8,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" = "{% static 'polls/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}"/>
-    <link rel="stylesheet" type="text/css" = "{% static 'polls/style.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
 </head>
 <body style="color: #232323;">
     
-    
+
+    {% include "polls/header.html" %}
     
     <div class="jumbotron">
         <div class="container">
     {% block main_content %}
-            {% include "polls/header.html" %}
-            {% include "polls/footer.html" %}
+            
     {% endblock %}
 
-    
-            
         </div>
     </div>
+
+    {% include "polls/footer.html" %}
     
 </body>
 </html> 
